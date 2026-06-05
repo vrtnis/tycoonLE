@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tycoonle"
+version = "0.1.0"
+description = "TycoonLE reinforcement learning environment implemented with JAX and Jumanji-style APIs."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+authors = [{ name = "TycoonLE contributors" }]
+dependencies = [
+    "chex>=0.1.86",
+    "jax>=0.4.30",
+    "jaxlib>=0.4.30",
+    "jumanji>=1.0.0",
+    "numpy>=1.26",
+    "optax>=0.2.3,<0.3",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+render = ["pillow>=10.0"]
+logging = ["tensorboard>=2.17"]
+
+[tool.setuptools.packages.find]
+where = ["python"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["python"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
