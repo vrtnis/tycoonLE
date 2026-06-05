@@ -65,6 +65,6 @@ If you use TycoonLE, cite this repository:
   title = {TycoonLE},
   author = {TycoonLE contributors},
   year = {2026},
-  url = {https://github.com/vrtnis/tycoonLE}
+  url = {https://github.com/vrtnis/tycoon-learning-environment}
 }
 ```
