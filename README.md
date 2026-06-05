@@ -60,7 +60,7 @@ Run a small PPO smoke train:
 
 ## Citation
 
-If you use TycoonLE, cite this repository:
+If you find this work useful, consider citing:
 
 ```bibtex
 @software{tycoonle,
