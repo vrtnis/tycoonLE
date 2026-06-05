@@ -1,5 +1,7 @@
 # TycoonLE
 
+![TycoonLE replay interface](assets/tycoonLE.png)
+
 TycoonLE is a reinforcement learning environment for transport-tycoon style logistics planning. It is implemented with JAX and Jumanji-style `reset` and `step` APIs, using fixed-shape observations for vectorized rollouts and a browser replay viewer for inspection.
 
 ## Install
@@ -57,6 +59,6 @@ If you use TycoonLE, cite this repository:
   title = {TycoonLE},
   author = {TycoonLE contributors},
   year = {2026},
-  url = {https://github.com/vrtnis/tycoon_jumanji}
+  url = {https://github.com/vrtnis/tycoonLE}
 }
 ```
