@@ -337,11 +337,11 @@ input {
 }
 
 .chart-stat.good strong {
-  color: #9be28e;
+  color: #7fa6c8;
 }
 
 .chart-stat.bad strong {
-  color: #ff9a8d;
+  color: #c98272;
 }
 
 .reward-chart {
@@ -540,6 +540,721 @@ input {
   color: #e8efe9;
 }
 
+.bench-shell {
+  overflow-x: hidden;
+  min-height: 100vh;
+  color: #eef5ef;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(215, 184, 90, 0.14), transparent 28rem),
+    linear-gradient(180deg, #0e1b18 0%, #162720 46%, #101b18 100%);
+}
+
+.bench-hero {
+  display: grid;
+  align-items: end;
+  width: min(1220px, calc(100vw - 40px));
+  min-height: 44vh;
+  margin: 0 auto;
+  padding: 64px 0 42px;
+}
+
+.bench-hero-copy {
+  display: grid;
+  gap: 18px;
+  align-content: center;
+  max-width: 760px;
+}
+
+.bench-kicker {
+  margin: 0;
+  color: #d7b85a;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.bench-hero h1 {
+  margin: 0;
+  color: #fff8dc;
+  font-size: clamp(46px, 8vw, 88px);
+  line-height: 0.94;
+}
+
+.bench-title-row {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.bench-title-row img {
+  width: clamp(150px, 19vw, 250px);
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: left top;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.22);
+}
+
+.bench-hero-copy > p:not(.bench-kicker) {
+  max-width: 760px;
+  margin: 0;
+  color: #c5d2ca;
+  font-size: 18px;
+  line-height: 1.58;
+}
+
+.method-card,
+.trajectory-card,
+.bench-tool {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.method-card span,
+.trajectory-card span {
+  color: #9cafaa;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.bench-section {
+  width: min(1220px, calc(100vw - 40px));
+  margin: 0 auto;
+  padding: 28px 0;
+}
+
+.bench-section-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.bench-section-header > span {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 8px;
+  color: #16251f;
+  background: #d7b85a;
+}
+
+.bench-section-header h2,
+.bench-method h2 {
+  margin: 0;
+  font-size: 23px;
+}
+
+.bench-section-header p,
+.bench-method p {
+  margin: 4px 0 0;
+  color: #aebdb6;
+  line-height: 1.55;
+}
+
+.bench-method {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.method-card {
+  display: grid;
+  gap: 8px;
+  min-height: 118px;
+  padding: 13px;
+}
+
+.method-card-icon {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 8px;
+  color: #d7b85a;
+  background: rgba(215, 184, 90, 0.12);
+}
+
+.method-card-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.method-card strong {
+  color: #edf6ee;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.leaderboard-chart {
+  display: grid;
+  gap: 7px;
+}
+
+.leaderboard-row {
+  display: grid;
+  grid-template-columns: 34px minmax(140px, 190px) minmax(0, 1fr) 58px;
+  gap: 10px;
+  align-items: center;
+  min-height: 34px;
+}
+
+.leaderboard-row .rank {
+  color: #9cafaa;
+  text-align: right;
+  font-size: 12px;
+}
+
+.model-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  overflow: hidden;
+  color: #edf6ee;
+  font-size: 14px;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.model-name span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.provider-badge {
+  --provider-color: #d7b85a;
+  display: inline-grid;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 5px;
+  color: #10211c;
+  background: var(--provider-color);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.provider-badge.compact {
+  width: 15px;
+  height: 15px;
+  margin-right: 7px;
+  border-radius: 4px;
+  font-size: 8px;
+  vertical-align: -2px;
+}
+
+.provider-anthropic,
+.provider-fable {
+  border-radius: 50%;
+}
+
+.leader-bar-track {
+  height: 14px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.leader-bar-track i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.leaderboard-row strong {
+  text-align: right;
+}
+
+.bench-two-up {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 18px;
+}
+
+.cost-performance-grid {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.92fr) minmax(0, 1.08fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.bench-tool {
+  min-width: 0;
+  padding: 16px;
+}
+
+.bench-tool .bench-section-header {
+  margin-bottom: 10px;
+}
+
+.bench-tool .bench-section-header h2 {
+  font-size: 18px;
+}
+
+.bench-tool .bench-section-header > span {
+  width: 30px;
+  height: 30px;
+}
+
+.bench-svg-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 240px;
+}
+
+.bench-chart-bg {
+  fill: rgba(5, 13, 11, 0.34);
+}
+
+.bench-grid-line {
+  stroke: rgba(238, 245, 239, 0.12);
+  stroke-width: 1;
+}
+
+.bench-axis-label {
+  fill: #aebdb6;
+  font-size: 12px;
+}
+
+.scatter-label {
+  font-size: 12px;
+  font-weight: 800;
+  paint-order: stroke;
+  stroke: #ffffff;
+  stroke-linejoin: round;
+  stroke-width: 3px;
+}
+
+.scatter-point-logo {
+  overflow: visible;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.16));
+}
+
+.line-series polyline {
+  vector-effect: non-scaling-stroke;
+}
+
+.line-chart-caption {
+  fill: #202a33;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.line-end-guide {
+  opacity: 0.34;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.line-end-logo,
+.line-legend-logo {
+  overflow: visible;
+  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.9));
+}
+
+.line-end-label {
+  font-size: 12px;
+  font-weight: 800;
+  paint-order: stroke;
+  stroke: #ffffff;
+  stroke-linejoin: round;
+  stroke-width: 3px;
+}
+
+.line-legend text {
+  font-size: 11px;
+  font-weight: 800;
+  paint-order: stroke;
+  stroke: #ffffff;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+}
+
+.heatmap-wrap,
+.model-table-wrap,
+.cost-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.heatmap-grid {
+  display: grid;
+  min-width: 780px;
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.heatmap-heading,
+.heatmap-model,
+.heatmap-cell,
+.heatmap-average {
+  min-height: 36px;
+  padding: 9px 10px;
+  background: #11211d;
+  font-size: 13px;
+}
+
+.heatmap-heading {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  color: #d7b85a;
+  font-weight: 800;
+}
+
+.task-icon-heading {
+  display: grid;
+  place-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.task-icon-heading svg {
+  color: #e8efe9;
+}
+
+.task-icon-heading span {
+  color: #aebdb6;
+  font-size: 10px;
+  line-height: 1.05;
+}
+
+.heatmap-model {
+  color: #edf6ee;
+  font-weight: 650;
+}
+
+.heatmap-model .model-name {
+  max-width: 100%;
+  font-size: 12px;
+}
+
+.heatmap-cell,
+.heatmap-average {
+  color: #fff;
+  text-align: right;
+  font-weight: 700;
+}
+
+.heatmap-average {
+  color: #d7b85a;
+}
+
+.cost-table-wrap {
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.cost-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+}
+
+.cost-table th,
+.cost-table td {
+  padding: 9px 11px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.cost-table th {
+  color: #d7b85a;
+  text-align: right;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.cost-table th:first-child,
+.cost-table td:first-child {
+  text-align: left;
+}
+
+.cost-table td {
+  color: #e8efe9;
+  text-align: right;
+}
+
+.cost-table-footer {
+  padding: 10px 12px;
+  color: #9cafaa;
+  font-size: 12px;
+  text-align: center;
+}
+
+.cost-scatter-tool {
+  align-content: center;
+  padding: 10px;
+}
+
+.trajectory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.trajectory-card {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  padding: 15px;
+}
+
+.trajectory-card strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 20px;
+}
+
+.trajectory-card p {
+  margin: 0;
+  color: #d7e4dc;
+  line-height: 1.48;
+}
+
+.trajectory-card ol {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trajectory-card li {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 8px;
+  align-items: baseline;
+  color: #aebdb6;
+  font-size: 13px;
+}
+
+.trajectory-card time {
+  color: #d7b85a;
+  font-weight: 700;
+}
+
+.model-table {
+  width: 100%;
+  min-width: 1040px;
+  border-collapse: collapse;
+}
+
+.model-table th,
+.model-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.model-table th:first-child,
+.model-table td:first-child,
+.model-table th:nth-child(2),
+.model-table td:nth-child(2) {
+  text-align: left;
+}
+
+.model-table th {
+  color: #d7b85a;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.model-table td {
+  color: #e8efe9;
+  font-size: 13px;
+}
+
+.bench-shell {
+  color: #202a33;
+  background: #f7f6f2;
+}
+
+.bench-shell .button {
+  border-color: #d8dde3;
+  color: #26323e;
+  background: #ffffff;
+}
+
+.bench-shell .button.primary {
+  color: #ffffff;
+  background: #26323e;
+}
+
+.bench-shell .bench-kicker,
+.bench-shell .bench-section-header h2,
+.bench-shell .bench-method h2 {
+  color: #202a33;
+}
+
+.bench-shell .bench-kicker {
+  color: #5f6b78;
+}
+
+.bench-shell .bench-hero h1 {
+  color: #18212b;
+}
+
+.bench-shell .bench-hero-copy > p:not(.bench-kicker),
+.bench-shell .bench-section-header p,
+.bench-shell .bench-method p,
+.bench-shell .trajectory-card p,
+.bench-shell .trajectory-card li,
+.bench-shell .cost-table-footer {
+  color: #66717d;
+}
+
+.bench-shell .method-card,
+.bench-shell .trajectory-card,
+.bench-shell .bench-tool,
+.bench-shell .heatmap-wrap,
+.bench-shell .model-table-wrap,
+.bench-shell .cost-table-wrap {
+  border-color: #dfe3e8;
+  background: #ffffff;
+}
+
+.bench-shell .method-card span,
+.bench-shell .trajectory-card span,
+.bench-shell .leaderboard-row .rank,
+.bench-shell .task-icon-heading span {
+  color: #6b7280;
+}
+
+.bench-shell .method-card .method-card-icon {
+  color: #40566d;
+  background: #eef2f5;
+}
+
+.bench-shell .bench-title-row img {
+  border-color: #dfe3e8;
+  box-shadow: 0 18px 40px rgba(24, 33, 43, 0.13);
+}
+
+.bench-shell .method-card strong,
+.bench-shell .model-name,
+.bench-shell .trajectory-card strong,
+.bench-shell .cost-table td,
+.bench-shell .model-table td {
+  color: #202a33;
+}
+
+.bench-shell .bench-section-header > span {
+  color: #ffffff;
+  background: #40566d;
+}
+
+.bench-shell .provider-badge {
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px #d9dee5;
+}
+
+.bench-shell .provider-badge.compact {
+  width: 15px;
+  height: 15px;
+}
+
+.bench-shell .provider-badge img {
+  display: block;
+  width: 82%;
+  height: 82%;
+  object-fit: contain;
+}
+
+.bench-shell .leader-bar-track {
+  background: #e6ebef;
+}
+
+.bench-shell .bench-chart-bg {
+  fill: #ffffff;
+}
+
+.bench-shell .bench-grid-line {
+  stroke: #e3e7eb;
+}
+
+.bench-shell .bench-axis-label {
+  fill: #66717d;
+}
+
+.bench-shell .line-chart-caption {
+  fill: #202a33;
+}
+
+.bench-shell .scatter-point-logo {
+  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.88));
+}
+
+.bench-shell .scatter-label {
+  stroke: #ffffff;
+}
+
+.bench-shell .heatmap-grid {
+  background: #dfe3e8;
+}
+
+.bench-shell .heatmap-heading,
+.bench-shell .heatmap-model,
+.bench-shell .heatmap-average {
+  color: #202a33;
+  background: #ffffff;
+}
+
+.bench-shell .task-icon-heading svg {
+  color: #40566d;
+}
+
+.bench-shell .heatmap-cell {
+  color: #202a33;
+}
+
+.bench-shell .heatmap-cell[style*="41%"],
+.bench-shell .heatmap-cell[style*="42%"],
+.bench-shell .heatmap-cell[style*="43%"],
+.bench-shell .heatmap-cell[style*="44%"],
+.bench-shell .heatmap-cell[style*="45%"] {
+  color: #ffffff;
+}
+
+.bench-shell .heatmap-average,
+.bench-shell .cost-table th,
+.bench-shell .model-table th,
+.bench-shell .trajectory-card time {
+  color: #40566d;
+}
+
+.bench-shell .cost-table th,
+.bench-shell .cost-table td,
+.bench-shell .model-table th,
+.bench-shell .model-table td {
+  border-bottom-color: #e3e7eb;
+}
+
 @media (max-width: 1180px) {
   .app-shell {
     grid-template-columns: 1fr;
@@ -566,5 +1281,64 @@ input {
 
   .timeline-strip {
     flex-wrap: wrap;
+  }
+
+  .bench-hero,
+  .bench-method,
+  .bench-two-up,
+  .cost-performance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .method-grid,
+  .trajectory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .bench-hero,
+  .bench-section {
+    width: min(100vw - 24px, 1220px);
+  }
+
+  .bench-hero {
+    padding-top: 30px;
+  }
+
+  .bench-hero-copy > p:not(.bench-kicker) {
+    font-size: 16px;
+  }
+
+  .method-grid,
+  .trajectory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bench-hero {
+    gap: 22px;
+    min-height: 0;
+    padding-bottom: 18px;
+  }
+
+  .bench-hero h1 {
+    font-size: clamp(42px, 18vw, 64px);
+  }
+
+  .bench-title-row {
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .bench-title-row img {
+    width: clamp(104px, 28vw, 136px);
+  }
+
+  .leaderboard-row {
+    grid-template-columns: 26px minmax(102px, 1fr) 48px;
+  }
+
+  .leader-bar-track {
+    grid-column: 2 / 4;
   }
 }
