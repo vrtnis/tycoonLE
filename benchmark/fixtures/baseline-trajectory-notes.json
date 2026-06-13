@@ -1,0 +1,78 @@
+[
+  {
+    "model": "Gemini 3.5 Flash",
+    "task": "Low Cash",
+    "text": "Uses financing early, then shifts to repayment after the first route starts producing cash flow.",
+    "checkpoints": [
+      {
+        "at": "0:18",
+        "label": "Takes starter loan"
+      },
+      {
+        "at": "2:40",
+        "label": "First delivery"
+      },
+      {
+        "at": "7:15",
+        "label": "Debt ratio stabilizes"
+      }
+    ]
+  },
+  {
+    "model": "Opus 4.8",
+    "task": "Chain",
+    "text": "Builds the upstream route first, then connects processor output to downstream demand before the first route saturates.",
+    "checkpoints": [
+      {
+        "at": "0:42",
+        "label": "Raw supply route"
+      },
+      {
+        "at": "4:10",
+        "label": "Processor link"
+      },
+      {
+        "at": "8:55",
+        "label": "Vehicles added"
+      }
+    ]
+  },
+  {
+    "model": "GPT-5.5",
+    "task": "Terrain Gap",
+    "text": "Chooses rail despite higher upfront cost because rough terrain makes road expansion inefficient.",
+    "checkpoints": [
+      {
+        "at": "1:12",
+        "label": "Compares modes"
+      },
+      {
+        "at": "3:38",
+        "label": "Builds rail crossing"
+      },
+      {
+        "at": "9:05",
+        "label": "Profit turns positive"
+      }
+    ]
+  },
+  {
+    "model": "Fable 5",
+    "task": "Mixed Network",
+    "text": "Splits capital between a high-margin cargo route and a town-growth route to improve final score.",
+    "checkpoints": [
+      {
+        "at": "0:25",
+        "label": "Ranks candidates"
+      },
+      {
+        "at": "5:22",
+        "label": "Second route opens"
+      },
+      {
+        "at": "11:44",
+        "label": "Network value climbs"
+      }
+    ]
+  }
+]
