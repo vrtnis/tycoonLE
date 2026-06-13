@@ -54,7 +54,6 @@ export function BenchmarkPage(): JSX.Element {
           <p className="bench-kicker">Tycoon Learning Environment</p>
           <div className="bench-title-row">
             <h1>TycoonBench</h1>
-            <img src={tycoonReplayImage} alt="TycoonLE replay interface" />
           </div>
           <p>
             Agent benchmark on transport economy planning tasks, built on the{" "}
@@ -64,6 +63,9 @@ export function BenchmarkPage(): JSX.Element {
             production planning, and RuneBench-style benchmark reporting.
           </p>
         </div>
+        <figure className="bench-hero-media">
+          <img src={tycoonReplayImage} alt="TycoonLE replay interface" />
+        </figure>
       </section>
 
       <section className="bench-section bench-method">
