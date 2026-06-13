@@ -12,6 +12,8 @@ TycoonLE uses a fixed-shape interface. Agents choose among valid route, finance,
 
 The replay UI makes policies inspectable through route choices, cargo flow, financing behavior, reward, score, and profit over time.
 
+TycoonBench provides a companion benchmark report for comparing agent and model performance on TycoonLE planning tasks: [vrtnis.github.io/tycoonbench](https://vrtnis.github.io/tycoonbench/).
+
 ## Install
 
 Use Python 3.11 or 3.12:
