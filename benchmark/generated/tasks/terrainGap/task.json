@@ -1,0 +1,64 @@
+{
+  "key": "terrainGap",
+  "label": "Terrain Gap",
+  "family": "terrain_gap",
+  "seed": 4231,
+  "horizonSteps": 84,
+  "startingCash": 180000,
+  "objective": "Decide whether higher upfront infrastructure cost is justified across rough terrain.",
+  "worldState": "A valuable route crosses hills and water. Roads are cheaper at build time but suffer congestion and maintenance drag; rail costs more but carries more cargo reliably.",
+  "decisionFrame": "Choose mode, path, financing posture, and how to handle the early negative cash period.",
+  "scoreTerms": [
+    {
+      "key": "mode-comparison",
+      "weight": 18,
+      "keywords": [
+        "rail",
+        "road",
+        "mode",
+        "compare"
+      ]
+    },
+    {
+      "key": "terrain-cost",
+      "weight": 16,
+      "keywords": [
+        "terrain",
+        "hill",
+        "water",
+        "bridge",
+        "slope"
+      ]
+    },
+    {
+      "key": "upfront-cost",
+      "weight": 12,
+      "keywords": [
+        "upfront",
+        "initial cost",
+        "capital",
+        "cash"
+      ]
+    },
+    {
+      "key": "operating-drag",
+      "weight": 12,
+      "keywords": [
+        "congestion",
+        "maintenance",
+        "delay",
+        "reliability"
+      ]
+    },
+    {
+      "key": "long-term-payoff",
+      "weight": 10,
+      "keywords": [
+        "long-term",
+        "payoff",
+        "capacity",
+        "break-even"
+      ]
+    }
+  ]
+}

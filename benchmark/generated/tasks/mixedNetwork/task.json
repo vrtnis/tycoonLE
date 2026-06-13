@@ -1,0 +1,63 @@
+{
+  "key": "mixedNetwork",
+  "label": "Mixed Network",
+  "family": "mixed_network",
+  "seed": 4201,
+  "horizonSteps": 96,
+  "startingCash": 220000,
+  "objective": "Allocate capital across competing cargo and town-growth routes.",
+  "worldState": "One route produces high near-term profit while another grows town demand and increases later network value. Overbuilding either one lowers the final score.",
+  "decisionFrame": "Choose portfolio split, route order, and capacity growth across two or three routes.",
+  "scoreTerms": [
+    {
+      "key": "portfolio",
+      "weight": 18,
+      "keywords": [
+        "portfolio",
+        "split",
+        "allocate",
+        "diversify"
+      ]
+    },
+    {
+      "key": "high-margin",
+      "weight": 14,
+      "keywords": [
+        "margin",
+        "profit",
+        "cash flow",
+        "high-value"
+      ]
+    },
+    {
+      "key": "town-growth",
+      "weight": 14,
+      "keywords": [
+        "town growth",
+        "passenger",
+        "goods",
+        "demand growth"
+      ]
+    },
+    {
+      "key": "capital-discipline",
+      "weight": 12,
+      "keywords": [
+        "capital",
+        "budget",
+        "reserve",
+        "avoid overbuild"
+      ]
+    },
+    {
+      "key": "network-effect",
+      "weight": 10,
+      "keywords": [
+        "network",
+        "connect",
+        "coverage",
+        "final score"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+You are operating a Tycoon Learning Environment logistics company.
+Choose a concrete plan for the benchmark task below.
+
+Task: Low Cash
+Objective: Bootstrap from low cash without starving the company before the first deliveries arrive.
+World state: The best route is visible but cannot be built with enough vehicles unless the agent uses debt or chooses a smaller bridge route first.
+Decision frame: Choose whether to borrow, how much to build immediately, and when repayment should begin.
+Starting cash: 38000
+Horizon steps: 72
+
+Scoring rewards plans that cover:
+- loan-timing: loan timing
+- runway: runway
+- first-revenue: first revenue
+- repayment: repayment
+- bootstrap: bootstrap
+
+Return only valid JSON with this shape:
+{
+  "summary": "one sentence",
+  "firstAction": {
+    "type": "build_route | take_loan | add_vehicle | wait",
+    "mode": "road | rail | air | water",
+    "cargo": "cargo name",
+    "reason": "why this action comes first"
+  },
+  "financing": {
+    "takeLoan": false,
+    "reserveCash": 0,
+    "repaymentTrigger": "when repayment starts"
+  },
+  "plan": [
+    {
+      "step": 1,
+      "action": "specific action",
+      "reason": "short operational reason"
+    },
+    {
+      "step": 2,
+      "action": "specific action",
+      "reason": "short operational reason"
+    }
+  ],
+  "riskControls": [
+    "risk and mitigation"
+  ],
+  "expectedOutcome": {
+    "profitDirection": "up | flat | down",
+    "mainBottleneck": "bottleneck to monitor"
+  }
+}

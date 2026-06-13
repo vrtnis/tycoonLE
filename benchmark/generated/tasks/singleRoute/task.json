@@ -1,0 +1,67 @@
+{
+  "key": "singleRoute",
+  "label": "Single Route",
+  "family": "single_route",
+  "seed": 4101,
+  "horizonSteps": 60,
+  "startingCash": 120000,
+  "objective": "Pick the strongest first route and capital allocation for a new transport company.",
+  "worldState": "Two towns sit near one coal mine, one passenger hub, and one goods consumer. Road construction is cheap, rail has higher capacity, and early cash is limited but not distressed.",
+  "decisionFrame": "Choose one opening route, vehicle count, and whether to reserve capital for follow-up vehicles.",
+  "scoreTerms": [
+    {
+      "key": "positive-roi",
+      "weight": 18,
+      "keywords": [
+        "roi",
+        "return",
+        "payback",
+        "margin",
+        "profit"
+      ]
+    },
+    {
+      "key": "demand-match",
+      "weight": 16,
+      "keywords": [
+        "demand",
+        "accepted",
+        "consumer",
+        "town",
+        "passengers"
+      ]
+    },
+    {
+      "key": "capital-reserve",
+      "weight": 12,
+      "keywords": [
+        "reserve",
+        "cash",
+        "runway",
+        "capital",
+        "budget"
+      ]
+    },
+    {
+      "key": "vehicle-sizing",
+      "weight": 10,
+      "keywords": [
+        "vehicle",
+        "capacity",
+        "frequency",
+        "throughput"
+      ]
+    },
+    {
+      "key": "route-risk",
+      "weight": 8,
+      "keywords": [
+        "congestion",
+        "distance",
+        "terrain",
+        "risk",
+        "maintenance"
+      ]
+    }
+  ]
+}

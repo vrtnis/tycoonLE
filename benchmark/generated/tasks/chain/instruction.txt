@@ -1,0 +1,51 @@
+You are operating a Tycoon Learning Environment logistics company.
+Choose a concrete plan for the benchmark task below.
+
+Task: Chain
+Objective: Build a multi-stage supply chain where upstream cargo enables downstream production.
+World state: A raw supplier feeds a processor, and the processor output has high town demand. A direct raw route pays quickly but caps the final score.
+Decision frame: Sequence upstream and downstream routes, choose mode, and decide when to add capacity.
+Starting cash: 160000
+Horizon steps: 84
+
+Scoring rewards plans that cover:
+- upstream-first: upstream first
+- downstream-link: downstream link
+- staging: staging
+- capacity-balance: capacity balance
+- delayed-return: delayed return
+
+Return only valid JSON with this shape:
+{
+  "summary": "one sentence",
+  "firstAction": {
+    "type": "build_route | take_loan | add_vehicle | wait",
+    "mode": "road | rail | air | water",
+    "cargo": "cargo name",
+    "reason": "why this action comes first"
+  },
+  "financing": {
+    "takeLoan": false,
+    "reserveCash": 0,
+    "repaymentTrigger": "when repayment starts"
+  },
+  "plan": [
+    {
+      "step": 1,
+      "action": "specific action",
+      "reason": "short operational reason"
+    },
+    {
+      "step": 2,
+      "action": "specific action",
+      "reason": "short operational reason"
+    }
+  ],
+  "riskControls": [
+    "risk and mitigation"
+  ],
+  "expectedOutcome": {
+    "profitDirection": "up | flat | down",
+    "mainBottleneck": "bottleneck to monitor"
+  }
+}

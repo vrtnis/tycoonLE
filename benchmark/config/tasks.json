@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "tasks": [
+    {
+      "key": "singleRoute",
+      "label": "Single Route",
+      "family": "single_route",
+      "seed": 4101,
+      "horizonSteps": 60,
+      "startingCash": 120000,
+      "objective": "Pick the strongest first route and capital allocation for a new transport company.",
+      "worldState": "Two towns sit near one coal mine, one passenger hub, and one goods consumer. Road construction is cheap, rail has higher capacity, and early cash is limited but not distressed.",
+      "decisionFrame": "Choose one opening route, vehicle count, and whether to reserve capital for follow-up vehicles.",
+      "scoreTerms": [
+        { "key": "positive-roi", "weight": 18, "keywords": ["roi", "return", "payback", "margin", "profit"] },
+        { "key": "demand-match", "weight": 16, "keywords": ["demand", "accepted", "consumer", "town", "passengers"] },
+        { "key": "capital-reserve", "weight": 12, "keywords": ["reserve", "cash", "runway", "capital", "budget"] },
+        { "key": "vehicle-sizing", "weight": 10, "keywords": ["vehicle", "capacity", "frequency", "throughput"] },
+        { "key": "route-risk", "weight": 8, "keywords": ["congestion", "distance", "terrain", "risk", "maintenance"] }
+      ]
+    },
+    {
+      "key": "lowCash",
+      "label": "Low Cash",
+      "family": "low_cash",
+      "seed": 4127,
+      "horizonSteps": 72,
+      "startingCash": 38000,
+      "objective": "Bootstrap from low cash without starving the company before the first deliveries arrive.",
+      "worldState": "The best route is visible but cannot be built with enough vehicles unless the agent uses debt or chooses a smaller bridge route first.",
+      "decisionFrame": "Choose whether to borrow, how much to build immediately, and when repayment should begin.",
+      "scoreTerms": [
+        { "key": "loan-timing", "weight": 18, "keywords": ["loan", "borrow", "debt", "financing"] },
+        { "key": "runway", "weight": 16, "keywords": ["runway", "cash", "reserve", "solvent", "buffer"] },
+        { "key": "first-revenue", "weight": 14, "keywords": ["first delivery", "cash flow", "revenue", "break-even"] },
+        { "key": "repayment", "weight": 10, "keywords": ["repay", "debt ratio", "interest", "principal"] },
+        { "key": "bootstrap", "weight": 8, "keywords": ["starter", "small route", "bootstrap", "phase"] }
+      ]
+    },
+    {
+      "key": "chain",
+      "label": "Chain",
+      "family": "chain",
+      "seed": 4159,
+      "horizonSteps": 84,
+      "startingCash": 160000,
+      "objective": "Build a multi-stage supply chain where upstream cargo enables downstream production.",
+      "worldState": "A raw supplier feeds a processor, and the processor output has high town demand. A direct raw route pays quickly but caps the final score.",
+      "decisionFrame": "Sequence upstream and downstream routes, choose mode, and decide when to add capacity.",
+      "scoreTerms": [
+        { "key": "upstream-first", "weight": 16, "keywords": ["upstream", "raw", "supplier", "input"] },
+        { "key": "downstream-link", "weight": 18, "keywords": ["downstream", "processor", "output", "consumer"] },
+        { "key": "staging", "weight": 14, "keywords": ["sequence", "stage", "phase", "before", "after"] },
+        { "key": "capacity-balance", "weight": 12, "keywords": ["balance", "bottleneck", "capacity", "saturate"] },
+        { "key": "delayed-return", "weight": 8, "keywords": ["delayed", "long-term", "compound", "final score"] }
+      ]
+    },
+    {
+      "key": "mixedNetwork",
+      "label": "Mixed Network",
+      "family": "mixed_network",
+      "seed": 4201,
+      "horizonSteps": 96,
+      "startingCash": 220000,
+      "objective": "Allocate capital across competing cargo and town-growth routes.",
+      "worldState": "One route produces high near-term profit while another grows town demand and increases later network value. Overbuilding either one lowers the final score.",
+      "decisionFrame": "Choose portfolio split, route order, and capacity growth across two or three routes.",
+      "scoreTerms": [
+        { "key": "portfolio", "weight": 18, "keywords": ["portfolio", "split", "allocate", "diversify"] },
+        { "key": "high-margin", "weight": 14, "keywords": ["margin", "profit", "cash flow", "high-value"] },
+        { "key": "town-growth", "weight": 14, "keywords": ["town growth", "passenger", "goods", "demand growth"] },
+        { "key": "capital-discipline", "weight": 12, "keywords": ["capital", "budget", "reserve", "avoid overbuild"] },
+        { "key": "network-effect", "weight": 10, "keywords": ["network", "connect", "coverage", "final score"] }
+      ]
+    },
+    {
+      "key": "terrainGap",
+      "label": "Terrain Gap",
+      "family": "terrain_gap",
+      "seed": 4231,
+      "horizonSteps": 84,
+      "startingCash": 180000,
+      "objective": "Decide whether higher upfront infrastructure cost is justified across rough terrain.",
+      "worldState": "A valuable route crosses hills and water. Roads are cheaper at build time but suffer congestion and maintenance drag; rail costs more but carries more cargo reliably.",
+      "decisionFrame": "Choose mode, path, financing posture, and how to handle the early negative cash period.",
+      "scoreTerms": [
+        { "key": "mode-comparison", "weight": 18, "keywords": ["rail", "road", "mode", "compare"] },
+        { "key": "terrain-cost", "weight": 16, "keywords": ["terrain", "hill", "water", "bridge", "slope"] },
+        { "key": "upfront-cost", "weight": 12, "keywords": ["upfront", "initial cost", "capital", "cash"] },
+        { "key": "operating-drag", "weight": 12, "keywords": ["congestion", "maintenance", "delay", "reliability"] },
+        { "key": "long-term-payoff", "weight": 10, "keywords": ["long-term", "payoff", "capacity", "break-even"] }
+      ]
+    }
+  ]
+}

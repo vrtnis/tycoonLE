@@ -1,0 +1,51 @@
+You are operating a Tycoon Learning Environment logistics company.
+Choose a concrete plan for the benchmark task below.
+
+Task: Mixed Network
+Objective: Allocate capital across competing cargo and town-growth routes.
+World state: One route produces high near-term profit while another grows town demand and increases later network value. Overbuilding either one lowers the final score.
+Decision frame: Choose portfolio split, route order, and capacity growth across two or three routes.
+Starting cash: 220000
+Horizon steps: 96
+
+Scoring rewards plans that cover:
+- portfolio: portfolio
+- high-margin: high margin
+- town-growth: town growth
+- capital-discipline: capital discipline
+- network-effect: network effect
+
+Return only valid JSON with this shape:
+{
+  "summary": "one sentence",
+  "firstAction": {
+    "type": "build_route | take_loan | add_vehicle | wait",
+    "mode": "road | rail | air | water",
+    "cargo": "cargo name",
+    "reason": "why this action comes first"
+  },
+  "financing": {
+    "takeLoan": false,
+    "reserveCash": 0,
+    "repaymentTrigger": "when repayment starts"
+  },
+  "plan": [
+    {
+      "step": 1,
+      "action": "specific action",
+      "reason": "short operational reason"
+    },
+    {
+      "step": 2,
+      "action": "specific action",
+      "reason": "short operational reason"
+    }
+  ],
+  "riskControls": [
+    "risk and mitigation"
+  ],
+  "expectedOutcome": {
+    "profitDirection": "up | flat | down",
+    "mainBottleneck": "bottleneck to monitor"
+  }
+}

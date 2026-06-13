@@ -1,0 +1,64 @@
+{
+  "key": "chain",
+  "label": "Chain",
+  "family": "chain",
+  "seed": 4159,
+  "horizonSteps": 84,
+  "startingCash": 160000,
+  "objective": "Build a multi-stage supply chain where upstream cargo enables downstream production.",
+  "worldState": "A raw supplier feeds a processor, and the processor output has high town demand. A direct raw route pays quickly but caps the final score.",
+  "decisionFrame": "Sequence upstream and downstream routes, choose mode, and decide when to add capacity.",
+  "scoreTerms": [
+    {
+      "key": "upstream-first",
+      "weight": 16,
+      "keywords": [
+        "upstream",
+        "raw",
+        "supplier",
+        "input"
+      ]
+    },
+    {
+      "key": "downstream-link",
+      "weight": 18,
+      "keywords": [
+        "downstream",
+        "processor",
+        "output",
+        "consumer"
+      ]
+    },
+    {
+      "key": "staging",
+      "weight": 14,
+      "keywords": [
+        "sequence",
+        "stage",
+        "phase",
+        "before",
+        "after"
+      ]
+    },
+    {
+      "key": "capacity-balance",
+      "weight": 12,
+      "keywords": [
+        "balance",
+        "bottleneck",
+        "capacity",
+        "saturate"
+      ]
+    },
+    {
+      "key": "delayed-return",
+      "weight": 8,
+      "keywords": [
+        "delayed",
+        "long-term",
+        "compound",
+        "final score"
+      ]
+    }
+  ]
+}

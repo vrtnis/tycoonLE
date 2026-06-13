@@ -1,0 +1,64 @@
+{
+  "key": "lowCash",
+  "label": "Low Cash",
+  "family": "low_cash",
+  "seed": 4127,
+  "horizonSteps": 72,
+  "startingCash": 38000,
+  "objective": "Bootstrap from low cash without starving the company before the first deliveries arrive.",
+  "worldState": "The best route is visible but cannot be built with enough vehicles unless the agent uses debt or chooses a smaller bridge route first.",
+  "decisionFrame": "Choose whether to borrow, how much to build immediately, and when repayment should begin.",
+  "scoreTerms": [
+    {
+      "key": "loan-timing",
+      "weight": 18,
+      "keywords": [
+        "loan",
+        "borrow",
+        "debt",
+        "financing"
+      ]
+    },
+    {
+      "key": "runway",
+      "weight": 16,
+      "keywords": [
+        "runway",
+        "cash",
+        "reserve",
+        "solvent",
+        "buffer"
+      ]
+    },
+    {
+      "key": "first-revenue",
+      "weight": 14,
+      "keywords": [
+        "first delivery",
+        "cash flow",
+        "revenue",
+        "break-even"
+      ]
+    },
+    {
+      "key": "repayment",
+      "weight": 10,
+      "keywords": [
+        "repay",
+        "debt ratio",
+        "interest",
+        "principal"
+      ]
+    },
+    {
+      "key": "bootstrap",
+      "weight": 8,
+      "keywords": [
+        "starter",
+        "small route",
+        "bootstrap",
+        "phase"
+      ]
+    }
+  ]
+}

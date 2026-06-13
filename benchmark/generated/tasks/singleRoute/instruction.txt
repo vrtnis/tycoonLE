@@ -1,0 +1,51 @@
+You are operating a Tycoon Learning Environment logistics company.
+Choose a concrete plan for the benchmark task below.
+
+Task: Single Route
+Objective: Pick the strongest first route and capital allocation for a new transport company.
+World state: Two towns sit near one coal mine, one passenger hub, and one goods consumer. Road construction is cheap, rail has higher capacity, and early cash is limited but not distressed.
+Decision frame: Choose one opening route, vehicle count, and whether to reserve capital for follow-up vehicles.
+Starting cash: 120000
+Horizon steps: 60
+
+Scoring rewards plans that cover:
+- positive-roi: positive roi
+- demand-match: demand match
+- capital-reserve: capital reserve
+- vehicle-sizing: vehicle sizing
+- route-risk: route risk
+
+Return only valid JSON with this shape:
+{
+  "summary": "one sentence",
+  "firstAction": {
+    "type": "build_route | take_loan | add_vehicle | wait",
+    "mode": "road | rail | air | water",
+    "cargo": "cargo name",
+    "reason": "why this action comes first"
+  },
+  "financing": {
+    "takeLoan": false,
+    "reserveCash": 0,
+    "repaymentTrigger": "when repayment starts"
+  },
+  "plan": [
+    {
+      "step": 1,
+      "action": "specific action",
+      "reason": "short operational reason"
+    },
+    {
+      "step": 2,
+      "action": "specific action",
+      "reason": "short operational reason"
+    }
+  ],
+  "riskControls": [
+    "risk and mitigation"
+  ],
+  "expectedOutcome": {
+    "profitDirection": "up | flat | down",
+    "mainBottleneck": "bottleneck to monitor"
+  }
+}
