@@ -52,6 +52,33 @@ Run tests:
 npm run build
 ```
 
+## TycoonBench OpenRouter runs
+
+The benchmark report is generated from JSON artifacts in `src/benchmark/generated/`.
+
+Create the fixed benchmark task files:
+
+```powershell
+npm run benchmark:generate
+```
+
+Preview OpenRouter requests without making API calls:
+
+```powershell
+npm run benchmark:run:preview -- --models gpt-55 --tasks singleRoute
+```
+
+Run configured OpenRouter models:
+
+```powershell
+$env:OPENROUTER_API_KEY="sk-or-..."
+npm run benchmark:run:openrouter -- --models gpt-55,gemini-35-flash --tasks singleRoute,chain
+npm run benchmark:extract
+npm run build
+```
+
+Model slugs live in `benchmark/config/openrouter-models.mjs`. Keep `provider.allow_fallbacks` disabled for benchmark runs unless the benchmark target is the router itself.
+
 ## Training
 
 Run a small PPO smoke train:

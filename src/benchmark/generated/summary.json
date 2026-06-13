@@ -1,0 +1,643 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-12T23:46:38.027Z",
+  "source": "baseline-results",
+  "tasks": [
+    {
+      "key": "singleRoute",
+      "label": "Single Route",
+      "focus": "Basic route selection and capital use"
+    },
+    {
+      "key": "lowCash",
+      "label": "Low Cash",
+      "focus": "Financing, debt timing, and bootstrap strategy"
+    },
+    {
+      "key": "chain",
+      "label": "Chain",
+      "focus": "Multi-stage supply chains"
+    },
+    {
+      "key": "mixedNetwork",
+      "label": "Mixed Network",
+      "focus": "Portfolio planning across competing routes"
+    },
+    {
+      "key": "terrainGap",
+      "label": "Terrain Gap",
+      "focus": "Costly terrain, mode choice, and long-term payoff"
+    }
+  ],
+  "models": [
+    {
+      "id": "fable-5",
+      "name": "Fable 5",
+      "provider": "Fable",
+      "overall": 77.2,
+      "peakVelocity": 16.1,
+      "finalScore": 79.1,
+      "successRate": 82,
+      "invalidActions": 0.6,
+      "profit": 27100,
+      "cost": 9.72,
+      "tokensIn": 3.8,
+      "tokensOut": 112,
+      "tasks": {
+        "singleRoute": 80.6,
+        "lowCash": 73.4,
+        "chain": 82.1,
+        "mixedNetwork": 79.5,
+        "terrainGap": 70.2
+      }
+    },
+    {
+      "id": "gpt-55-xh",
+      "name": "GPT-5.5 xh",
+      "provider": "OpenAI",
+      "overall": 76.4,
+      "peakVelocity": 15.9,
+      "finalScore": 77.6,
+      "successRate": 80,
+      "invalidActions": 0.9,
+      "profit": 26300,
+      "cost": 13.94,
+      "tokensIn": 6.7,
+      "tokensOut": 184,
+      "tasks": {
+        "singleRoute": 77.8,
+        "lowCash": 70.9,
+        "chain": 80.3,
+        "mixedNetwork": 74.1,
+        "terrainGap": 79
+      }
+    },
+    {
+      "id": "fable-5-xh",
+      "name": "Fable 5 xh",
+      "provider": "Fable",
+      "overall": 74.9,
+      "peakVelocity": 15.2,
+      "finalScore": 77.9,
+      "successRate": 78,
+      "invalidActions": 0.7,
+      "profit": 24800,
+      "cost": 10.63,
+      "tokensIn": 4.2,
+      "tokensOut": 128,
+      "tasks": {
+        "singleRoute": 78.4,
+        "lowCash": 72.2,
+        "chain": 76.8,
+        "mixedNetwork": 78.6,
+        "terrainGap": 68.4
+      }
+    },
+    {
+      "id": "gemini-35-flash",
+      "name": "Gemini 3.5 Flash",
+      "provider": "Google",
+      "overall": 72.8,
+      "peakVelocity": 15.6,
+      "finalScore": 73.8,
+      "successRate": 72,
+      "invalidActions": 1.4,
+      "profit": 21300,
+      "cost": 4.26,
+      "tokensIn": 12.6,
+      "tokensOut": 82,
+      "tasks": {
+        "singleRoute": 76.2,
+        "lowCash": 78.1,
+        "chain": 70.1,
+        "mixedNetwork": 72.4,
+        "terrainGap": 67.2
+      }
+    },
+    {
+      "id": "gpt-55",
+      "name": "GPT-5.5",
+      "provider": "OpenAI",
+      "overall": 71.3,
+      "peakVelocity": 14.6,
+      "finalScore": 73.1,
+      "successRate": 70,
+      "invalidActions": 0.8,
+      "profit": 20100,
+      "cost": 8.68,
+      "tokensIn": 5.4,
+      "tokensOut": 118,
+      "tasks": {
+        "singleRoute": 74.9,
+        "lowCash": 68.7,
+        "chain": 75.2,
+        "mixedNetwork": 70.8,
+        "terrainGap": 67.1
+      }
+    },
+    {
+      "id": "opus-48-max",
+      "name": "Opus 4.8 max",
+      "provider": "Anthropic",
+      "overall": 70.3,
+      "peakVelocity": 14.3,
+      "finalScore": 72,
+      "successRate": 68,
+      "invalidActions": 0.4,
+      "profit": 19300,
+      "cost": 5.91,
+      "tokensIn": 3.1,
+      "tokensOut": 124,
+      "tasks": {
+        "singleRoute": 71.5,
+        "lowCash": 64.2,
+        "chain": 78.4,
+        "mixedNetwork": 68.9,
+        "terrainGap": 68.5
+      }
+    },
+    {
+      "id": "opus-48",
+      "name": "Opus 4.8",
+      "provider": "Anthropic",
+      "overall": 68.4,
+      "peakVelocity": 13.4,
+      "finalScore": 69.7,
+      "successRate": 65,
+      "invalidActions": 0.5,
+      "profit": 17600,
+      "cost": 5.22,
+      "tokensIn": 3.7,
+      "tokensOut": 94,
+      "tasks": {
+        "singleRoute": 70.9,
+        "lowCash": 66.1,
+        "chain": 75.8,
+        "mixedNetwork": 66.9,
+        "terrainGap": 62.4
+      }
+    },
+    {
+      "id": "gemini-35-flash-hi",
+      "name": "Gemini 3.5 Flash hi",
+      "provider": "Google",
+      "overall": 67.7,
+      "peakVelocity": 14.9,
+      "finalScore": 68.4,
+      "successRate": 63,
+      "invalidActions": 1.6,
+      "profit": 16900,
+      "cost": 4.39,
+      "tokensIn": 12.9,
+      "tokensOut": 94,
+      "tasks": {
+        "singleRoute": 69,
+        "lowCash": 74.6,
+        "chain": 65.8,
+        "mixedNetwork": 67.3,
+        "terrainGap": 61.9
+      }
+    },
+    {
+      "id": "opus-47-xh",
+      "name": "Opus 4.7 xh",
+      "provider": "Anthropic",
+      "overall": 66.2,
+      "peakVelocity": 12.8,
+      "finalScore": 67.4,
+      "successRate": 60,
+      "invalidActions": 0.9,
+      "profit": 15800,
+      "cost": 7.44,
+      "tokensIn": 5.6,
+      "tokensOut": 108,
+      "tasks": {
+        "singleRoute": 68.7,
+        "lowCash": 60.8,
+        "chain": 70.4,
+        "mixedNetwork": 64.9,
+        "terrainGap": 66.3
+      }
+    },
+    {
+      "id": "gpt-54",
+      "name": "GPT-5.4",
+      "provider": "OpenAI",
+      "overall": 65.7,
+      "peakVelocity": 13,
+      "finalScore": 66.5,
+      "successRate": 58,
+      "invalidActions": 1.2,
+      "profit": 14600,
+      "cost": 5.76,
+      "tokensIn": 4.8,
+      "tokensOut": 88,
+      "tasks": {
+        "singleRoute": 65.4,
+        "lowCash": 59.2,
+        "chain": 72.6,
+        "mixedNetwork": 63.1,
+        "terrainGap": 68
+      }
+    },
+    {
+      "id": "gemini-3-flash",
+      "name": "Gemini 3 Flash",
+      "provider": "Google",
+      "overall": 65,
+      "peakVelocity": 15,
+      "finalScore": 65.7,
+      "successRate": 55,
+      "invalidActions": 1.7,
+      "profit": 13700,
+      "cost": 0.74,
+      "tokensIn": 6.9,
+      "tokensOut": 34,
+      "tasks": {
+        "singleRoute": 71.1,
+        "lowCash": 72.9,
+        "chain": 57.5,
+        "mixedNetwork": 61.2,
+        "terrainGap": 62.4
+      }
+    },
+    {
+      "id": "opus-47",
+      "name": "Opus 4.7",
+      "provider": "Anthropic",
+      "overall": 64.7,
+      "peakVelocity": 12.2,
+      "finalScore": 65.4,
+      "successRate": 55,
+      "invalidActions": 0.8,
+      "profit": 13200,
+      "cost": 7.08,
+      "tokensIn": 5.2,
+      "tokensOut": 98,
+      "tasks": {
+        "singleRoute": 65.9,
+        "lowCash": 61.4,
+        "chain": 68.1,
+        "mixedNetwork": 63.3,
+        "terrainGap": 64.9
+      }
+    },
+    {
+      "id": "gemini-31-pro",
+      "name": "Gemini 3.1 Pro",
+      "provider": "Google",
+      "overall": 63.4,
+      "peakVelocity": 12.6,
+      "finalScore": 64.2,
+      "successRate": 52,
+      "invalidActions": 1.3,
+      "profit": 12300,
+      "cost": 1.96,
+      "tokensIn": 4.2,
+      "tokensOut": 42,
+      "tasks": {
+        "singleRoute": 63.4,
+        "lowCash": 62.8,
+        "chain": 63.1,
+        "mixedNetwork": 58.7,
+        "terrainGap": 68.8
+      }
+    },
+    {
+      "id": "opus-46",
+      "name": "Opus 4.6",
+      "provider": "Anthropic",
+      "overall": 61.9,
+      "peakVelocity": 11.5,
+      "finalScore": 63,
+      "successRate": 48,
+      "invalidActions": 1,
+      "profit": 11400,
+      "cost": 6.2,
+      "tokensIn": 6,
+      "tokensOut": 38,
+      "tasks": {
+        "singleRoute": 64.2,
+        "lowCash": 58.4,
+        "chain": 65.9,
+        "mixedNetwork": 59.1,
+        "terrainGap": 61.8
+      }
+    },
+    {
+      "id": "deepseek-v4",
+      "name": "DeepSeek V4",
+      "provider": "DeepSeek",
+      "overall": 60.5,
+      "peakVelocity": 12.4,
+      "finalScore": 61.2,
+      "successRate": 47,
+      "invalidActions": 1.7,
+      "profit": 10200,
+      "cost": 1.51,
+      "tokensIn": 7.8,
+      "tokensOut": 34,
+      "tasks": {
+        "singleRoute": 58.8,
+        "lowCash": 61.9,
+        "chain": 59.3,
+        "mixedNetwork": 57.1,
+        "terrainGap": 65.4
+      }
+    },
+    {
+      "id": "codex-53",
+      "name": "Codex 5.3",
+      "provider": "OpenAI",
+      "overall": 60.2,
+      "peakVelocity": 11.6,
+      "finalScore": 61.8,
+      "successRate": 46,
+      "invalidActions": 1.1,
+      "profit": 9800,
+      "cost": 2.84,
+      "tokensIn": 9.6,
+      "tokensOut": 29,
+      "tasks": {
+        "singleRoute": 61.9,
+        "lowCash": 56.4,
+        "chain": 64.6,
+        "mixedNetwork": 60.7,
+        "terrainGap": 57.3
+      }
+    },
+    {
+      "id": "gpt-54-mini",
+      "name": "GPT-5.4 Mini",
+      "provider": "OpenAI",
+      "overall": 58.5,
+      "peakVelocity": 10.9,
+      "finalScore": 60.6,
+      "successRate": 43,
+      "invalidActions": 1.5,
+      "profit": 8600,
+      "cost": 1.08,
+      "tokensIn": 6.5,
+      "tokensOut": 25,
+      "tasks": {
+        "singleRoute": 62.6,
+        "lowCash": 60.1,
+        "chain": 57.4,
+        "mixedNetwork": 55.9,
+        "terrainGap": 56.3
+      }
+    },
+    {
+      "id": "opus-45",
+      "name": "Opus 4.5",
+      "provider": "Anthropic",
+      "overall": 57.9,
+      "peakVelocity": 10.4,
+      "finalScore": 59.2,
+      "successRate": 39,
+      "invalidActions": 1.2,
+      "profit": 7800,
+      "cost": 5.48,
+      "tokensIn": 5.2,
+      "tokensOut": 32,
+      "tasks": {
+        "singleRoute": 58.7,
+        "lowCash": 53.9,
+        "chain": 63.8,
+        "mixedNetwork": 55.6,
+        "terrainGap": 57.3
+      }
+    },
+    {
+      "id": "qwen37-max",
+      "name": "Qwen3.7 Max",
+      "provider": "Qwen",
+      "overall": 57.7,
+      "peakVelocity": 10.7,
+      "finalScore": 58.1,
+      "successRate": 38,
+      "invalidActions": 1.9,
+      "profit": 7600,
+      "cost": 1.64,
+      "tokensIn": 8.7,
+      "tokensOut": 30,
+      "tasks": {
+        "singleRoute": 56.1,
+        "lowCash": 57.6,
+        "chain": 54.4,
+        "mixedNetwork": 61.5,
+        "terrainGap": 58.9
+      }
+    },
+    {
+      "id": "gemini-3-pro",
+      "name": "Gemini 3 Pro",
+      "provider": "Google",
+      "overall": 54.4,
+      "peakVelocity": 9.9,
+      "finalScore": 55.1,
+      "successRate": 33,
+      "invalidActions": 2.2,
+      "profit": 4900,
+      "cost": 2.21,
+      "tokensIn": 5.6,
+      "tokensOut": 24,
+      "tasks": {
+        "singleRoute": 54.3,
+        "lowCash": 52.8,
+        "chain": 55.2,
+        "mixedNetwork": 50.4,
+        "terrainGap": 59.1
+      }
+    },
+    {
+      "id": "kimi-k26",
+      "name": "Kimi K2.6",
+      "provider": "Moonshot",
+      "overall": 52.4,
+      "peakVelocity": 9.6,
+      "finalScore": 53.3,
+      "successRate": 31,
+      "invalidActions": 2.7,
+      "profit": 3400,
+      "cost": 1.11,
+      "tokensIn": 6.8,
+      "tokensOut": 23,
+      "tasks": {
+        "singleRoute": 52.1,
+        "lowCash": 48.7,
+        "chain": 55.9,
+        "mixedNetwork": 49.4,
+        "terrainGap": 56
+      }
+    },
+    {
+      "id": "sonnet-45",
+      "name": "Sonnet 4.5",
+      "provider": "Anthropic",
+      "overall": 48.5,
+      "peakVelocity": 8.1,
+      "finalScore": 49.7,
+      "successRate": 23,
+      "invalidActions": 2.3,
+      "profit": 900,
+      "cost": 2.42,
+      "tokensIn": 4,
+      "tokensOut": 18,
+      "tasks": {
+        "singleRoute": 49.8,
+        "lowCash": 43.1,
+        "chain": 54.7,
+        "mixedNetwork": 45.6,
+        "terrainGap": 49.1
+      }
+    },
+    {
+      "id": "sonnet-46",
+      "name": "Sonnet 4.6",
+      "provider": "Anthropic",
+      "overall": 47.9,
+      "peakVelocity": 8.6,
+      "finalScore": 49.1,
+      "successRate": 24,
+      "invalidActions": 2.6,
+      "profit": 600,
+      "cost": 2.68,
+      "tokensIn": 4.5,
+      "tokensOut": 20,
+      "tasks": {
+        "singleRoute": 46.4,
+        "lowCash": 48.2,
+        "chain": 47.7,
+        "mixedNetwork": 50.3,
+        "terrainGap": 46.8
+      }
+    },
+    {
+      "id": "gpt-54-nano",
+      "name": "GPT-5.4 Nano",
+      "provider": "OpenAI",
+      "overall": 41.3,
+      "peakVelocity": 7,
+      "finalScore": 42.8,
+      "successRate": 15,
+      "invalidActions": 3.3,
+      "profit": -3900,
+      "cost": 0.39,
+      "tokensIn": 3,
+      "tokensOut": 12,
+      "tasks": {
+        "singleRoute": 42.1,
+        "lowCash": 38.7,
+        "chain": 39.4,
+        "mixedNetwork": 41.3,
+        "terrainGap": 44.8
+      }
+    },
+    {
+      "id": "kimi-k25",
+      "name": "Kimi K2.5",
+      "provider": "Moonshot",
+      "overall": 39.9,
+      "peakVelocity": 6.8,
+      "finalScore": 41.5,
+      "successRate": 13,
+      "invalidActions": 3.9,
+      "profit": -5400,
+      "cost": 0.83,
+      "tokensIn": 3.8,
+      "tokensOut": 14,
+      "tasks": {
+        "singleRoute": 40.2,
+        "lowCash": 34.9,
+        "chain": 42.3,
+        "mixedNetwork": 36.8,
+        "terrainGap": 45.1
+      }
+    },
+    {
+      "id": "glm-5",
+      "name": "GLM 5",
+      "provider": "GLM",
+      "overall": 36.7,
+      "peakVelocity": 6,
+      "finalScore": 38.1,
+      "successRate": 9,
+      "invalidActions": 4.2,
+      "profit": -7600,
+      "cost": 0.77,
+      "tokensIn": 4.2,
+      "tokensOut": 12,
+      "tasks": {
+        "singleRoute": 38.9,
+        "lowCash": 33.1,
+        "chain": 36.2,
+        "mixedNetwork": 39.8,
+        "terrainGap": 35.5
+      }
+    },
+    {
+      "id": "haiku-45",
+      "name": "Haiku 4.5",
+      "provider": "Anthropic",
+      "overall": 34.9,
+      "peakVelocity": 5.5,
+      "finalScore": 36.4,
+      "successRate": 8,
+      "invalidActions": 4.1,
+      "profit": -9300,
+      "cost": 0.49,
+      "tokensIn": 2.7,
+      "tokensOut": 10,
+      "tasks": {
+        "singleRoute": 36.5,
+        "lowCash": 31.2,
+        "chain": 38.9,
+        "mixedNetwork": 32.7,
+        "terrainGap": 35.1
+      }
+    },
+    {
+      "id": "qwen3-max",
+      "name": "Qwen3 Max",
+      "provider": "Qwen",
+      "overall": 33.2,
+      "peakVelocity": 5.7,
+      "finalScore": 34.4,
+      "successRate": 7,
+      "invalidActions": 4.9,
+      "profit": -10600,
+      "cost": 0.64,
+      "tokensIn": 3.6,
+      "tokensOut": 10,
+      "tasks": {
+        "singleRoute": 33.8,
+        "lowCash": 29.1,
+        "chain": 31.6,
+        "mixedNetwork": 36.9,
+        "terrainGap": 34.4
+      }
+    },
+    {
+      "id": "qwen35-35b",
+      "name": "Qwen3.5 35B",
+      "provider": "Qwen",
+      "overall": 27.6,
+      "peakVelocity": 4.4,
+      "finalScore": 29.6,
+      "successRate": 4,
+      "invalidActions": 5.4,
+      "profit": -13900,
+      "cost": 0.37,
+      "tokensIn": 3.1,
+      "tokensOut": 8,
+      "tasks": {
+        "singleRoute": 30.9,
+        "lowCash": 22.4,
+        "chain": 27.8,
+        "mixedNetwork": 25.1,
+        "terrainGap": 31.7
+      }
+    }
+  ]
+}
