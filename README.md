@@ -1,6 +1,6 @@
 # Tycoon Learning Environment
 
-[![JAX Accelerated](assets/jax-accelerated.svg)](https://github.com/google/jax)
+[![JAX Accelerated](assets/jax-accelerated.svg)](https://github.com/google/jax) [![Discord](https://img.shields.io/badge/Discord-Join%20server-5865F2?logo=discord&logoColor=white)](https://discord.gg/GPwEgANZKX)
 
 ![TycoonLE replay interface](assets/tycoonLE.png)
 
