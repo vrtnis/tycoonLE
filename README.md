@@ -72,3 +72,7 @@ If you find this work useful, consider citing:
   url = {https://github.com/vrtnis/tycoon-learning-environment}
 }
 ```
+
+## Artwork Credits
+
+TycoonLE uses sprite artwork from [OpenGFX](https://github.com/OpenTTD/OpenGFX), an open-source graphics base set for [OpenTTD](https://www.openttd.org/).
