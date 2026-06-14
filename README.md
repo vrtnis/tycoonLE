@@ -72,9 +72,17 @@ Open a marimo notebook:
 .\.venv\Scripts\python.exe -m marimo edit notebooks\01_quickstart_rollout.py
 ```
 
+For the read-only app view:
+
+```powershell
+.\.venv\Scripts\python.exe -m marimo run notebooks\01_quickstart_rollout.py
+```
+
+The molab badges open GitHub-backed static previews. The committed session snapshots in `notebooks/__marimo__/session/` let those previews include rendered outputs such as sprite maps and tables. To share the same hosted app view as `marimo run`, create a synced notebook in molab and use its "Run as app" share link.
+
 The notebook set covers:
 
-| Notebook | What it covers | Try on molab |
+| Notebook | What it covers | Preview on molab |
 | --- | --- | --- |
 | [`01_quickstart_rollout.py`](notebooks/01_quickstart_rollout.py) | Interactive reset, rollout, OpenGFX sprite map render, candidate table, metrics, and replay export. | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/vrtnis/tycoon-learning-environment/blob/main/notebooks/01_quickstart_rollout.py) |
 | [`02_action_candidates_and_rewards.py`](notebooks/02_action_candidates_and_rewards.py) | Inspect candidate actions, execute a selected action, and compare reward/metric deltas with before/after sprite maps. | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/vrtnis/tycoon-learning-environment/blob/main/notebooks/02_action_candidates_and_rewards.py) |
