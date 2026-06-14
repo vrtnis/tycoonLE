@@ -1,3 +1,19 @@
+# /// script
+# requires-python = ">=3.11,<3.13"
+# dependencies = [
+#     "chex>=0.1.86",
+#     "jax>=0.4.30",
+#     "jaxlib>=0.4.30",
+#     "jumanji>=1.0.0",
+#     "marimo>=0.23",
+#     "matplotlib>=3.8",
+#     "numpy>=1.26",
+#     "optax>=0.2.3,<0.3",
+#     "pandas>=2.2",
+#     "pillow>=10.0",
+# ]
+# ///
+
 import marimo
 
 __generated_with = "0.23.9"
