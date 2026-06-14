@@ -4,7 +4,7 @@ __generated_with = "0.23.9"
 app = marimo.App(width="medium")
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _():
     import sys
     import time
@@ -107,7 +107,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(FAMILY_NAMES, mo):
     family_pick = mo.ui.dropdown(options=list(FAMILY_NAMES), value="chain", label="scenario type")
     seed_pick = mo.ui.slider(start=0, stop=999, step=1, value=0, include_input=True, label="seed")
@@ -133,7 +133,7 @@ def _(FAMILY_NAMES, mo):
     )
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(TycoonLE, family_pick):
     env = TycoonLE(split="dev", family=family_pick.value)
     return (env,)
@@ -149,7 +149,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(
     batch_pick,
     env,
@@ -193,7 +193,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(
     PPOConfig,
     create_train_state,
@@ -232,7 +232,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo, plot_columns, training_table):
     if training_table.empty:
         training_output = mo.md("Set `PPO updates` above zero to run the PPO smoke train.")

@@ -4,7 +4,7 @@ __generated_with = "0.23.9"
 app = marimo.App(width="medium")
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _():
     import json
     import sys
@@ -112,7 +112,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(FAMILY_NAMES, mo):
     family_pick = mo.ui.dropdown(options=list(FAMILY_NAMES), value="chain", label="scenario type")
     seed_pick = mo.ui.slider(start=0, stop=999, step=1, value=0, include_input=True, label="seed")
@@ -136,7 +136,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(
     TycoonLE,
     export_replay,
@@ -164,7 +164,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(pd, replay, summary):
     scenario = replay["scenario"]
     summary_table = pd.DataFrame(
@@ -191,7 +191,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(events, mo):
     max_event_index = max(0, len(events) - 1)
     step_pick = mo.ui.slider(
@@ -206,7 +206,7 @@ def _(events, mo):
     return (step_pick,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(events, rollout, state_at, step_pick):
     event_index = min(int(step_pick.value), max(0, len(events) - 1))
     selected_event = events[event_index]
@@ -224,7 +224,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(event_index, frame_figure, selected_event, selected_state):
     map_figure = frame_figure(
         selected_state,
@@ -244,7 +244,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(build_candidate_frame, selected_event):
     candidate_table = build_candidate_frame(selected_event)
     candidate_table
@@ -261,7 +261,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(metrics_frame, selected_event):
     metric_table = metrics_frame(selected_event)
     metric_table
@@ -278,7 +278,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(REPO_ROOT, json, mo, replay):
     replay_relative_path = "runs/marimo/quickstart/replay.json"
     replay_path = REPO_ROOT / replay_relative_path

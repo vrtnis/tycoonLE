@@ -4,7 +4,7 @@ __generated_with = "0.23.9"
 app = marimo.App(width="medium")
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _():
     import json
     import sys
@@ -128,7 +128,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(FAMILY_NAMES, mo):
     family_pick = mo.ui.dropdown(options=list(FAMILY_NAMES), value="chain", label="scenario type")
     seed_pick = mo.ui.slider(start=0, stop=999, step=1, value=0, include_input=True, label="seed")
@@ -136,7 +136,7 @@ def _(FAMILY_NAMES, mo):
     return family_pick, seed_pick
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(TycoonLE, family_pick, jax, seed_pick):
     env = TycoonLE(split="dev", family=family_pick.value)
     state, _ = env.reset(jax.random.PRNGKey(int(seed_pick.value)))
@@ -153,7 +153,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(candidate_frame_all, state):
     candidate_table = candidate_frame_all(state)
     candidate_table
@@ -170,7 +170,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(MAX_CANDIDATES, jax, mo, state):
     valid_indices = [int(index) for index, active in enumerate(jax.device_get(state.action_mask)) if bool(active)]
     default_action = valid_indices[0] if valid_indices else 0
@@ -186,7 +186,7 @@ def _(MAX_CANDIDATES, jax, mo, state):
     return (action_index,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(
     action_index,
     build_execution_trace,
@@ -226,7 +226,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(
     action_summary_frame,
     chosen_action,
@@ -261,7 +261,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(after_state, metric_delta_frame, state):
     reward_metrics_table = metric_delta_frame(state, after_state)
     reward_metrics_table
@@ -278,7 +278,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(execution_trace, pd):
     execution_steps_table = pd.DataFrame(execution_trace["steps"]) if execution_trace else pd.DataFrame()
     execution_steps_table
@@ -295,7 +295,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(after_state, frame_pair_figure, state):
     comparison_figure = frame_pair_figure(state, after_state)
     comparison_figure
