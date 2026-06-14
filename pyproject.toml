@@ -22,6 +22,7 @@ dependencies = [
 
 [project.optional-dependencies]
 test = ["pytest>=8.0"]
+notebooks = ["marimo>=0.23", "matplotlib>=3.8", "pandas>=2.2", "pillow>=10.0"]
 render = ["pillow>=10.0"]
 logging = ["tensorboard>=2.17"]
 
